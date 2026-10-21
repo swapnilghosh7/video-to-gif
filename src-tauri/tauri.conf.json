@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Video GIF Studio",
+  "version": "0.1.0",
+  "identifier": "com.videogifstudio.desktop",
+  "build": {
+    "beforeDevCommand": "npm run prepare:tools && npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build && npm run prepare:tools",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [{ "title": "Video GIF Studio", "width": 1320, "height": 900, "minWidth": 940, "minHeight": 680 }],
+    "security": { "csp": null }
+  },
+  "bundle": { "active": true, "targets": "all", "icon": ["icons/icon.png", "icons/icon.ico", "icons/icon.icns"], "resources": ["tools/"] }
+}
